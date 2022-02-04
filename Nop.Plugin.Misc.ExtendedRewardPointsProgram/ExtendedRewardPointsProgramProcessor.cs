@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Nop.Core;
-using Nop.Core.Domain.Tasks;
+using Nop.Core.Domain.ScheduleTasks;
 using Nop.Plugin.Misc.ExtendedRewardPointsProgram.Services;
 using Nop.Services.Blogs;
 using Nop.Services.Catalog;
@@ -13,7 +12,7 @@ using Nop.Services.Localization;
 using Nop.Services.Messages;
 using Nop.Services.News;
 using Nop.Services.Plugins;
-using Nop.Services.Tasks;
+using Nop.Services.ScheduleTasks;
 
 namespace Nop.Plugin.Misc.ExtendedRewardPointsProgram
 {
@@ -140,7 +139,7 @@ namespace Nop.Plugin.Misc.ExtendedRewardPointsProgram
                 });
             }
 
-            await _localizationService.AddLocaleResourceAsync(new Dictionary<string, string>
+            await _localizationService.AddOrUpdateLocaleResourceAsync(new Dictionary<string, string>
             {
                 ["Plugins.Misc.ExtendedRewardPointsProgram"] = "Extended reward points settings",
                 ["Plugins.Misc.ExtendedRewardPointsProgram.Fields.ActivatePointsImmediately"] = "Activate points immediately",

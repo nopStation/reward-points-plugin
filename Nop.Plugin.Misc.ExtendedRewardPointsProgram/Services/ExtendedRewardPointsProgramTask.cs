@@ -6,8 +6,8 @@ using Nop.Services.Common;
 using Nop.Services.Customers;
 using Nop.Services.Localization;
 using Nop.Services.Orders;
+using Nop.Services.ScheduleTasks;
 using Nop.Services.Stores;
-using Nop.Services.Tasks;
 
 namespace Nop.Plugin.Misc.ExtendedRewardPointsProgram.Services
 {
